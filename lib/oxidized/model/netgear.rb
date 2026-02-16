@@ -62,7 +62,7 @@ class Netgear < Oxidized::Model
     cfg.gsub! /(Current SNTP Synchronized Time:).*/, '\\1 <removed>'
     cfg.gsub! /(Current System Time:).*/, '\\1 <removed>'
     # Remove standalone backspace lines
-    cfg.gsub!(/(?:\r?\n)?\x08(?:\r?\n)?/, "\n")
+    cfg.gsub! (/(?:\r?\n)?\x08(?:\r?\n)?/, "\n")
     cfg
   end
 end
